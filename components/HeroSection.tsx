@@ -2,7 +2,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-[#0F172A] flex items-center px-6 py-16 md:px-16 lg:px-24"
+      className="min-h-screen bg-[#0F172A] flex items-center px-6 pt-28 pb-16 md:px-16 lg:px-24"
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
 
