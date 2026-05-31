@@ -2,38 +2,42 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-[#0F172A] flex items-center px-6 pt-28 pb-16 md:px-16 lg:px-24"
+      className="min-h-screen bg-white flex items-center px-6 pt-28 pb-16 md:px-12 lg:px-20 border-b border-black/10"
     >
-      <div className="w-full max-w-6xl mx-auto flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
+      <div className="w-full max-w-6xl mx-auto flex flex-col-reverse items-center gap-16 md:flex-row md:justify-between">
 
-        {/* النص - يظهر في الأسفل على الموبايل، على اليسار في الديسكتوب */}
-        <div className="flex-1 flex flex-col items-center text-center md:items-start md:text-right gap-6">
+        {/* النص */}
+        <div className="flex-1 flex flex-col items-center text-center md:items-end md:text-right gap-8">
           <div>
-            <h1 className="text-4xl font-bold text-white leading-tight md:text-5xl lg:text-6xl">
+            <p className="text-sm font-medium text-[#888] tracking-widest uppercase mb-4">
+              Public Relations & Corporate Communication
+            </p>
+            <h1 className="text-5xl font-black text-black leading-tight md:text-6xl lg:text-7xl">
               عمر السعيد
             </h1>
-            <p className="mt-3 text-lg text-[#94A3B8] font-medium md:text-xl">
-              متخصص في العلاقات العامة والاتصال المؤسسي
+            <p className="mt-4 text-xl text-[#444] font-medium md:text-2xl">
+              متخصص في العلاقات العامة
+              <br />
+              والاتصال المؤسسي
             </p>
           </div>
 
-          <p className="text-[#CBD5E1] text-base leading-relaxed max-w-md md:text-lg">
+          <p className="text-[#666] text-base leading-relaxed max-w-md md:text-lg">
             أبني جسور التواصل بين المؤسسات وجمهورها،
-            <br />
             وأصنع الأثر من خلال رسائل واضحة وموثوقة.
           </p>
 
           <a
             href="#contact"
-            className="mt-2 inline-block bg-white text-[#0F172A] font-bold px-8 py-3 rounded-full text-base transition-all duration-200 hover:bg-[#E5E7EB] hover:scale-105 active:scale-95"
+            className="inline-block bg-black text-white font-bold px-10 py-4 text-base transition-all duration-200 hover:bg-[#222] hover:scale-105 active:scale-95"
           >
             تواصل معي
           </a>
         </div>
 
-        {/* الصورة - تظهر في الأعلى على الموبايل، على اليمين في الديسكتوب */}
+        {/* الصورة */}
         <div className="flex-shrink-0">
-          <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white/10">
+          <div className="w-52 h-52 md:w-72 md:h-72 lg:w-88 lg:h-88 overflow-hidden grayscale">
             <img
               src="/profile.jpg"
               alt="عمر السعيد"
