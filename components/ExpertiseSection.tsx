@@ -23,31 +23,29 @@ const expertise = [
 
 export default function ExpertiseSection() {
   return (
-    <section id="expertise" className="bg-white px-6 py-24 md:px-12 lg:px-20 border-b border-black/10">
-      <div className="w-full max-w-6xl mx-auto">
+    <section id="expertise" className="bg-[#0a0a0a] px-6 py-24 md:px-12 border-t border-white/5">
+      <div className="w-full max-w-2xl mx-auto flex flex-col items-center gap-12">
 
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-16">
-          <p className="text-sm font-medium text-[#888] tracking-widest uppercase">Expertise</p>
-          <h2 className="text-4xl font-black text-black md:text-5xl text-right">
-            مجالات الخبرة
-          </h2>
+        <div className="text-center">
+          <p className="text-white/30 text-xs tracking-widest uppercase mb-4">Expertise</p>
+          <h2 className="text-3xl font-bold text-white md:text-4xl">مجالات الخبرة</h2>
         </div>
 
-        <div className="grid grid-cols-1 divide-y divide-black/10 md:grid-cols-2 md:divide-y-0">
-          {expertise.map((item, i) => (
+        <div className="w-full divide-y divide-white/5">
+          {expertise.map((item) => (
             <div
               key={item.number}
-              className={`py-10 text-right group cursor-default ${
-                i % 2 === 0 ? "md:border-l md:border-black/10 md:pl-12" : "md:pr-12"
-              } ${i < 2 ? "md:border-b md:border-black/10 md:pb-12" : "md:pt-12"}`}
+              className="flex items-start gap-6 py-8 text-right group"
             >
-              <span className="text-xs font-bold text-[#bbb] tracking-widest">{item.number}</span>
-              <h3 className="text-2xl font-black text-black mt-3 mb-4 group-hover:underline transition-all">
-                {item.title}
-              </h3>
-              <p className="text-[#666] text-base leading-relaxed">
-                {item.desc}
-              </p>
+              <span className="text-white/20 text-xs font-bold tracking-widest mt-1 flex-shrink-0">
+                {item.number}
+              </span>
+              <div className="flex-1">
+                <h3 className="text-white font-bold text-xl mb-2 group-hover:text-white/80 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
+              </div>
             </div>
           ))}
         </div>

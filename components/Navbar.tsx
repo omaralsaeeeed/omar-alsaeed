@@ -2,7 +2,6 @@
 import { useState } from "react";
 
 const links = [
-  { label: "الرئيسية", href: "#hero" },
   { label: "نبذة عني", href: "#about" },
   { label: "مجالات الخبرة", href: "#expertise" },
   { label: "تواصل معي", href: "#contact" },
@@ -12,16 +11,18 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 bg-white border-b border-black/10">
-      <nav className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between md:px-12">
-        <span className="text-black font-bold text-xl tracking-tight">عمر السعيد</span>
+    <header className="fixed top-0 right-0 left-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-white/5">
+      <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between md:px-12">
+        <span className="text-white font-bold text-base tracking-widest uppercase">
+          Omar Alsaeed
+        </span>
 
         <ul className="hidden md:flex items-center gap-10">
           {links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-[#555] text-sm font-medium transition-colors hover:text-black"
+                className="text-white/50 text-sm tracking-wide transition-colors hover:text-white"
               >
                 {link.label}
               </a>
@@ -30,16 +31,16 @@ export default function Navbar() {
         </ul>
 
         <button
-          className="md:hidden text-black p-2"
+          className="md:hidden text-white/70 p-1"
           onClick={() => setOpen(!open)}
           aria-label="القائمة"
         >
           {open ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           )}
@@ -47,13 +48,13 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <ul className="md:hidden bg-white border-t border-black/10 px-6 pb-4 flex flex-col gap-2">
+        <ul className="md:hidden bg-[#0a0a0a] border-t border-white/5 px-6 pb-4 flex flex-col">
           {links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-[#555] text-base font-medium block py-3 border-b border-black/5 hover:text-black transition-colors"
+                className="text-white/50 text-sm tracking-wide block py-3 border-b border-white/5 hover:text-white transition-colors"
               >
                 {link.label}
               </a>

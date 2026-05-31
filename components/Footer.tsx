@@ -1,10 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-white/10 px-6 py-8 md:px-12">
-      <div className="max-w-6xl mx-auto flex flex-col gap-2 md:flex-row md:justify-between md:items-center">
-        <span className="text-white font-black text-lg">عمر السعيد</span>
-        <p className="text-[#555] text-sm">
-          © {new Date().getFullYear()} جميع الحقوق محفوظة
+    <footer className="bg-[#0a0a0a] border-t border-white/5 px-6 py-8 md:px-12">
+      <div className="max-w-2xl mx-auto flex flex-col items-center gap-2 text-center">
+        <span className="text-white/20 text-xs tracking-widest uppercase">
+          Omar Alsaeed · Public Relations
+        </span>
+        <p className="text-white/10 text-xs">
+          © {new Date().getFullYear()}
         </p>
       </div>
     </footer>

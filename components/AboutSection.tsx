@@ -1,24 +1,21 @@
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-white px-6 py-24 md:px-12 lg:px-20 border-b border-black/10">
-      <div className="w-full max-w-6xl mx-auto flex flex-col gap-12 md:flex-row md:gap-24">
+    <section id="about" className="bg-[#0f0f0f] px-6 py-24 md:px-12 border-t border-white/5">
+      <div className="w-full max-w-2xl mx-auto text-center flex flex-col items-center gap-8">
 
-        <div className="md:w-48 flex-shrink-0">
-          <p className="text-sm font-medium text-[#888] tracking-widest uppercase">
-            About
-          </p>
-        </div>
+        <p className="text-white/30 text-xs tracking-widest uppercase">About</p>
 
-        <div className="flex-1 text-right">
-          <h2 className="text-4xl font-black text-black mb-8 md:text-5xl">
-            نبذة عني
-          </h2>
-          <p className="text-[#444] text-lg leading-loose md:text-xl">
-            متخصص في العلاقات العامة والاتصال المؤسسي، أمتلك خبرة في بناء الاستراتيجيات
-            الإعلامية وإدارة السمعة للمؤسسات والجهات الحكومية. أعمل على تعزيز الحضور
-            المؤسسي وتطوير رسائل تواصلية فاعلة تُرسّخ الثقة وتُحقق الأثر المطلوب.
-          </p>
-        </div>
+        <h2 className="text-3xl font-bold text-white md:text-4xl">
+          نبذة عني
+        </h2>
+
+        <div className="w-8 h-px bg-white/20" />
+
+        <p className="text-white/60 text-lg leading-loose">
+          متخصص في العلاقات العامة والاتصال المؤسسي، أمتلك خبرة في بناء الاستراتيجيات
+          الإعلامية وإدارة السمعة للمؤسسات والجهات الحكومية. أعمل على تعزيز الحضور
+          المؤسسي وتطوير رسائل تواصلية فاعلة تُرسّخ الثقة وتُحقق الأثر المطلوب.
+        </p>
 
       </div>
     </section>
